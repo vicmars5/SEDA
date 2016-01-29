@@ -1,11 +1,17 @@
 #include <string>
 #include <iostream>
+#include <cmath>
 #define IVA 16
 #define ISR 11
 #define RETENCION_ISR 10
 #define RETENCION_IVA 10
 
 using namespace std;
+
+/**
+ * @author UnoCuatro
+ * Practica 1
+ */
 
 int main (){
 	//Variables para tabla recibo honorarios
@@ -50,35 +56,37 @@ int main (){
     gastoIva=gasto*IVA/100;
     ivaPagar=iva-gastoIva-retencionIva;
 
+	
+
     //Salidas que muestra la tabla recibo de honorarios
     cout << "\n\n***Tabla de recibo de honorarios***" << endl;
-    cout << "Ingresos\t" << ingreso << endl;
-    cout << "(+)IVA\t" << iva << endl;
-    cout << "(=)Subtotal\t" << subtotal << endl;
-    cout << "(-)Retencion ISR\t" << retencionIsr << endl;
-    cout << "(-)Retencion IVA\t" << retencionIva << endl;
-    cout << "(=)Total\t" << total << endl;
+    cout << "Ingresos\t$" << floorf((ingreso*100))/100 << endl;
+    cout << "(+)IVA\<t1></t1>" << floorf((iva*100))/100 << endl;
+    cout << "(=)Subtotal\t$" << floorf((subtotal*100))/100 << endl;
+    cout << "(-)Retencion ISR\t$" << floorf((retencionIsr*100))/100 << endl;
+    cout << "(-)Retencion IVA\t$" << floorf((retencionIva*100))/100 << endl;
+    cout << "(=)Total\t$" << floorf((total*100))/100 << endl;
     
     //Salidas que muestra la tabla de ganancias
     cout << "\n\n***Tabla de ganancias***" << endl;
-    cout << "Ingresos\t" << ingreso << endl;
-    cout << "(-)Gastos\t" << gasto << endl;
-    cout << "(=)Ganancia Bruta\t" << gananciaBruta << endl;
-    cout << "(-)Retencion ISR\t" << isr << endl;
-    cout << "(=)Ganancia Neta\t" << gananciaNeta << endl;
+    cout << "Ingresos\t$" << floorf((ingreso*100))/100 << endl;
+    cout << "(-)Gastos\t$" << floorf((gasto*100))/100 << endl;
+    cout << "(=)Ganancia Bruta\t$" << floorf((gananciaBruta*100))/100 << endl;
+    cout << "(-)Retencion ISR\t$" << floorf((isr*100))/100 << endl;
+    cout << "(=)Ganancia Neta\t$" << floorf((gananciaNeta*100))/100 << endl;
     
     //Salidas que muestra la tabla de ISR
     cout << "\n\n***Tabla de ISR***" << endl;
-    cout << "ISR\t" << isr << endl;
-    cout << "(-)ISR Retenido\t" << retencionIsr << endl;
-    cout << "(=)ISR A Pagar\t" << isrPagar << endl;
+    cout << "ISR\t$" << floorf((isr*100))/100 << endl;
+    cout << "(-)ISR Retenido\t$" << floorf((retencionIsr*100))/100 << endl;
+    cout << "(=)ISR A Pagar\t$" << floorf((isrPagar*100))/100 << endl;
     
     //Salidas que muestra la tabla de IVA
     cout << "\n\n***Tabla de IVA***" << endl;
-    cout << "IVA\t" << iva << endl;
-    cout << "(-)Gastos IVA\t" << gastoIva << endl;
-    cout << "(-)Retencion IVA\t" << retencionIva << endl;
-    cout << "(=)IVA a pagar\t" << ivaPagar << endl;
+    cout << "IVA\t$" << floorf((iva*100))/100 << endl;
+    cout << "(-)Gastos IVA\t$" << floorf((gastoIva*100))/100 << endl;
+    cout << "(-)Retencion IVA\t$" << floorf((retencionIva*100))/100 << endl;
+    cout << "(=)IVA a pagar\t$" << floorf((ivaPagar*100))/100 << endl;
     
     cout << "\n\nPresiona \"Enter\" para salir" << endl;
     cin.get();
