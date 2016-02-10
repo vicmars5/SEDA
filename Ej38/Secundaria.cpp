@@ -72,6 +72,7 @@ int main() {
 		cout << endl;
 		i++;
 	}
+	
 	cout << endl;
 	cout << "\tESTADISTICAS: " << endl  << endl;
 	cout << "\tSexo" << endl;

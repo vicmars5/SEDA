@@ -69,14 +69,15 @@ int main() {
 		}
 	}
 
-	cout << "\t ESTADISTICAS: " << endl  << endl;
-	cout << "Sexo" << endl;
+	cout << endl;
+	cout << "\tESTADISTICAS: " << endl  << endl;
+	cout << "\tSexo" << endl;
 	cout << "Hombres: \t" << cantHom << endl
 			<< "Mujeres: \t" << cantMuj << endl << endl;
-	cout << "Edad" << endl;
+	cout << "\tEdad" << endl;
 	cout << "Doce \t\t" << cant12 << endl
 			<< "Trece \t\t" << cant13 << endl
 			<< "Catorce \t" << cant14 << endl
 			<< "Quince \t\t" << cant15 << endl
-			<< "Mayor quince \t" << cantMayor15 << endl; 
+			<< "Mayor quince \t" << cantMayor15 << endl;
 }

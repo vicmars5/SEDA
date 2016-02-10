@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Secundaria {
 
 	public static void main(String[] args) {
+		int i;
 		int cantAlumnos, edad;
 		int cantMayor15=0, cant15=0, cant14=0, cant13=0, cant12=0;
 		int cantMuj=0, cantHom=0;
@@ -12,7 +13,8 @@ public class Secundaria {
 		System.out.println("Puede indicarme la cantidad de alumnos que ingresara? ");
 		cantAlumnos = sc.nextInt();
 
-		for (int i=0; i < cantAlumnos; i++) {
+		i=0;
+		while (i < cantAlumnos) {
 			System.out.println("\tAlumno " + (i+1));
 			do{
 				System.out.print("Edad: ");
@@ -66,6 +68,7 @@ public class Secundaria {
 					}
 				}
 			}
+			i++;
 		}
 
 		System.out.println("\t ESTADISTICAS: \n");
