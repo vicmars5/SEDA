@@ -3,6 +3,7 @@
 using namespace std;
 
 int main() {
+	int i;
 	int cantAlumnos, edad;
 	int cantMayor15=0, cant15=0, cant14=0, cant13=0, cant12=0;
 	int cantMuj=0, cantHom=0;
@@ -13,7 +14,8 @@ int main() {
 	cin >> cantAlumnos;
 	cin.ignore();
 
-	for (int i=0; i < cantAlumnos; i++) {
+	i=0;
+	while(i<cantAlumnos){
 		cout << "\tAlumno " << (i+1) << endl;
 		do{
 			cout << "Edad: ";
@@ -67,13 +69,15 @@ int main() {
 				}
 			}
 		}
+		cout << endl;
+		i++;
 	}
-
-	cout << "\t ESTADISTICAS: " << endl  << endl;
-	cout << "Sexo" << endl;
+	cout << endl;
+	cout << "\tESTADISTICAS: " << endl  << endl;
+	cout << "\tSexo" << endl;
 	cout << "Hombres: \t" << cantHom << endl
 			<< "Mujeres: \t" << cantMuj << endl << endl;
-	cout << "Edad" << endl;
+	cout << "\tEdad" << endl;
 	cout << "Doce \t\t" << cant12 << endl
 			<< "Trece \t\t" << cant13 << endl
 			<< "Catorce \t" << cant14 << endl
