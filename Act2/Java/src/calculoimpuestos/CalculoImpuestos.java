@@ -68,12 +68,13 @@ public class CalculoImpuestos {
         do{
             
             System.out.println("\t\tCÁLCULO DE IMPUESTOS ANUAL\n" //Muestra acentos
+                    +"Menú principal: \n"
                     +"1.-Establecer mes de captura (mes actual es " + meses[mes] +")\n"
                     +"2.-Captura de ingresos\n"
                     +"3.-Captura de gastos\n"
                     +"4.-Mostrar lista de ingresos anual\n"
                     +"5.-Mostrar lista de gastos anual\n"
-                    +"6.-Calculo de impuestos anual\n"
+                    +"6.-Cálculo de impuestos anual\n"
                     +"7.-Salir\n\n"
                     +"Opción: ");
             eleccion=(short) ScanF.leeInt(); //Opcion ingresada por el usuario
@@ -93,7 +94,7 @@ public class CalculoImpuestos {
                         
                         
                         if(!(1<=eleccionMes && eleccionMes<=12)){
-                            System.out.println("ELECCION NO VALIDA, INTENTELO DE NUEVO");
+                            System.out.println("ELECCIÓN NO VALIDA, INTENTELO DE NUEVO");
                             valido=false;
                         }
                         else{
@@ -218,8 +219,8 @@ public class CalculoImpuestos {
                     System.out.println("Ingresos\t"+moneda.format(ingresoAnual));
                     System.out.println("(+)IVA\t"+moneda.format(iva));
                     System.out.println("(=)Subtotal\t"+moneda.format(subtotal));
-                    System.out.println("(-)Retencion ISR\t"+moneda.format(retencionIsr));
-                    System.out.println("(-)Retencion IVA\t"+moneda.format(retencionIva));
+                    System.out.println("(-)Retención ISR\t"+moneda.format(retencionIsr));
+                    System.out.println("(-)Retención IVA\t"+moneda.format(retencionIva));
                     System.out.println("(=)Total\t"+moneda.format(total));
 
                     //Salidas que muestra la tabla de ganancias
@@ -250,7 +251,7 @@ public class CalculoImpuestos {
                 case 7:
                     break;
                 default:
-                    System.out.println("\t OPCION NO VALIDA, INTENTELO DE NUEVO");
+                    System.out.println("\t OPCIÓN NO VALIDA, INTENTELO DE NUEVO");
             }
         }while(eleccion!=7);
     }

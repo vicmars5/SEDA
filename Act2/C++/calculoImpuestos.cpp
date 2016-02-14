@@ -65,6 +65,7 @@ int main (){
 
     do{
         cout <<"\t\tCALCULO DE IMPUESTOS ANUAL " << endl
+            << "Menú principal" << endl
             << "1.-Establecer mes de captura (mes actual es " + meses[mes] +") " << endl
             << "2.-Captura de ingresos " << endl
             << "3.-Captura de gastos " << endl

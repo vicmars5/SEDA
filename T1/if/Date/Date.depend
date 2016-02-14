@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1455138104 source:/home/vic/OneDrive/Escuela/2 semestre/SEDA/misPracticas/T1/Date/main.cpp
+	<iostream>
+	"date.h"
+
+1455138185 source:/home/vic/OneDrive/Escuela/2 semestre/SEDA/misPracticas/T1/Date/src/date.cpp
+	"date.h"
+
+1455134122 /home/vic/OneDrive/Escuela/2 semestre/SEDA/misPracticas/T1/Date/include/date.h
+
