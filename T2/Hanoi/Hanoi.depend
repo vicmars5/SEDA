@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1455749878 source:/home/vic/OneDrive/Escuela/2 semestre/SEDA/misPracticas/T2/Hanoi/main.cpp
+	<iostream>
+	"pila.h"
+
+1455749289 source:/home/vic/OneDrive/Escuela/2 semestre/SEDA/misPracticas/T2/Hanoi/src/pila.cpp
+	"pila.h"
+	<iostream>
+
+1455749284 /home/vic/OneDrive/Escuela/2 semestre/SEDA/misPracticas/T2/Hanoi/include/pila.h
+
