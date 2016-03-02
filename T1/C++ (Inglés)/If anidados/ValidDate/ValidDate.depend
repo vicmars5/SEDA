@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1455298637 source:/home/vic/OneDrive/Escuela/2 semestre/EDA/EDA/p3/ValidDate/src/date.cpp
+	"date.h"
+
+1455298603 /home/vic/OneDrive/Escuela/2 semestre/EDA/EDA/p3/ValidDate/include/date.h
+
+1455485810 source:/home/vic/OneDrive/Escuela/2 semestre/SEDA/misPracticas/T1/ValidDate/main.cpp
+	<iostream>
+	"date.h"
+
+1455485849 /home/vic/OneDrive/Escuela/2 semestre/SEDA/misPracticas/T1/ValidDate/include/date.h
+
+1455482097 source:/home/vic/OneDrive/Escuela/2 semestre/SEDA/misPracticas/T1/ValidDate/src/date.cpp
+	"date.h"
+

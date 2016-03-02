@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1456202130 source:/home/vic/OneDrive/Escuela/2 semestre/SEDA/misPracticas/A2/Agenda/main.cpp
+	<iostream>
+	<cstdlib>
+	"materia.h"
+
+1456201372 /home/vic/OneDrive/Escuela/2 semestre/SEDA/misPracticas/A2/Agenda/include/materia.h
+

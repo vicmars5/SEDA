@@ -3,33 +3,45 @@
 
 using namespace std;
 
-int main()
-{
-    int day, month, year;
+void prueba(int day, int month, int year){
     Date d;
-    cout << "VERIFICADOR DE FECHA V1.0" << endl << endl;
-
-    cout << "Dame le dia: ";
-    cin >> day;
-    cout << "Dame el mes: ";
-    cin >> month;
-    cout << "Dame el año; ";
-    cin >> year;
-    cin.ignore();
+    cout << "Dame el dia: " << day << endl;
+    cout << "Dame el mes: " << month << endl;
+    cout << "Dame el año: " << year << endl;
 
     if(d.isDate(day, month, year)){
         cout << "Fecha valida!" << endl;
     }
     else {
-        if(d.getErrorCode() == -1){
-            cout << "Mes no valido" << endl;
-        }
-        else {
-            cout << "Dia no valido" << endl;
+        switch(d.getDateErrorCode()){
+            case -1:
+                cout << "Mes no valido!" << endl << endl;
+                break;
+            case -2:
+                cout << "Dia no valido!" << endl << endl;
+                break;
         }
     }
 
+    cout << "Presione ENTRAR para continuar... ";
     cin.get();
+    cout << endl << endl;
+}
+int main()
+{
+    cout << "VERIFICADOR DE FECHA V1.0" << endl << endl;
+
+    prueba(12, 9, 1979);
+    prueba(0, 1, 2011);
+    prueba(1, 13, 2011);
+    prueba(12, -1, 2011);
+    prueba(31, 4, 2011);
+    prueba(29, 2, 2011);
+    prueba(29, 2, 2016);
+    prueba(28, 2, 2011);
+    prueba(21, 3, -34);
+    prueba(0, 0, 0);
+    prueba(14, 2, 2016);
 
     return 0;
 }

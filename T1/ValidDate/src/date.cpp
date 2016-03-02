@@ -1,49 +1,56 @@
 #include "date.h"
 
 Date::Date() {
-    errorCode=-2;
+    dateErrorCode=-2;
 }
 
 Date::~Date() {
-    //dtor
 }
 
 bool Date::isDate(const int& day, const int& month, const int& year) {
-    if(day <= 0) {
-        errorCode = -2;
-        return false;
+    if(day > 0){
+        switch(month) {
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                if(day<=30){
+                    dateErrorCode=0;
+                    return true;
+                }
+                break;
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                if(day<=31){
+                    dateErrorCode=0;
+                    return true;
+                }
+                break;
+            case 2:
+                if ((year%4)!=0 && day<=28){
+                    dateErrorCode=0;
+                    return true;
+                }
+                if ((year%4)==0 && day<=29){
+                    dateErrorCode=0;
+                    return true;
+                }
+                break;
+            default:
+                dateErrorCode=-1;
+                return false;
+        }
     }
-
-    if(month<1 || month >12) {
-        errorCode = -1;
-        return false;
-    }
-
-    if((month == 4 or month==6 or month==9 or month==11) && day<=30) {
-        errorCode = 0;
-        return true;
-    }
-
-    if((month==1 || month==3 || month==5 || month==7 || month==8 || month==10 || month==12) && day<=31) {
-        errorCode = 0;
-        return true;
-    }
-
-    if(((year % 4) != 0) && day <=28 && month==2) {
-        errorCode = 0;
-        return true;
-    }
-
-    if((year % 4) == 0 && day<=29 && month==2) {
-        errorCode = 0;
-        return true;
-    }
-
-    errorCode = -2;
+    dateErrorCode=-2;
     return false;
 }
 
-int Date::getErrorCode()
+int Date::getDateErrorCode()
 {
-    return errorCode;
+    return dateErrorCode;
 }
